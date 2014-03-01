@@ -40,7 +40,7 @@ public class SimpleBeanWithInterface implements InitializingBean {
 
         if (age == Integer.MIN_VALUE) {
             throw new IllegalArgumentException(
-                    "You must set the age property of any beans of type " + SimpleBean.class);
+                    "You must set the age property of any beans of type " + SimpleBeanWithInterface.class);
         }
     }
 
