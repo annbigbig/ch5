@@ -7,9 +7,11 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -62,8 +64,21 @@ public class PropertyEditorBean {
 
     public void setProperties(Properties properties) {
         System.out.println("Loaded " + properties.size() + " properties");
+        printProperties(properties);  //added by annbigbig at 2014-03-05 03:12:00
         this.properties = properties;
     }
+    
+    //added by annbigbig at 2014-03-05 03:12:00
+    public void printProperties(Properties properties) {
+    	Set<Object> keys = properties.keySet();
+    	Iterator<Object> itr = keys.iterator();
+    	while(itr.hasNext()){
+    		String key = (String)itr.next();
+    		String value = properties.getProperty(key);
+    		System.out.println("key=" + key + "  value=" + value);
+    	}
+    }
+    
 
     public void setUrl(URL url) {
         System.out.println("Setting URL: " + url.toExternalForm());
