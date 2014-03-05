@@ -46,6 +46,10 @@ public class PropertyEditorBean {
     private String trimString;            // StringTrimmerEditor
     
     private URL url;                      // URLEditor
+    
+    private Integer num1;
+    
+    private int num2;
 
     public void setCls(Class cls) {
         System.out.println("Setting class: " + cls.getName());
@@ -128,6 +132,16 @@ public class PropertyEditorBean {
 		this.trimString = trimString;
 	}
 
+	public void setNum1(Integer num1){
+		System.out.println("Setting Integer value:" + num1);
+		this.num1 = num1;
+	}
+	
+	public void setNum2(int num2){
+		System.out.println("Setting int value:" + num2);
+		this.num2 = num2;
+	}
+	
 	public static void main(String[] args) {
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:pe/builtin.xml");

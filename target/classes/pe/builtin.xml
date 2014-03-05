@@ -73,5 +73,11 @@
         <property name="url">
             <value>http://www.springframework.org</value>
         </property>
+        <property name="num1">
+        	<value>2070</value>
+        </property>
+        <property name="num2">
+        	<value>-5</value>
+        </property>
     </bean>
 </beans>

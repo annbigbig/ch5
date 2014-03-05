@@ -20,9 +20,12 @@ public class MessageSourceDemo {
 
         Locale english = Locale.ENGLISH;
         Locale czech = new Locale("cs", "CZ");
+        //added by annbigbig at 2014-03-06 01:50
+        Locale taiwan = new Locale("zh","TW");
 
         System.out.println(ctx.getMessage("msg", null, english));
         System.out.println(ctx.getMessage("msg", null, czech));
+        System.out.println(ctx.getMessage("msg", null, taiwan));
         
         System.out.println(ctx.getMessage("nameMsg", new Object[] { "Clarence",
                 "Ho" }, english));
