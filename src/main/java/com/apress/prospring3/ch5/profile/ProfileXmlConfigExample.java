@@ -16,7 +16,7 @@ public class ProfileXmlConfigExample {
 	public static void main(String[] args) {
 
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-		ctx.getEnvironment().setActiveProfiles("kindergarten");
+		ctx.getEnvironment().setActiveProfiles("kindergarten");	//指定哪一份profile應該生效
 		//ctx.getEnvironment().setActiveProfiles("highschool");
 		ctx.load("classpath:profile/*-config.xml");
 		ctx.refresh();
