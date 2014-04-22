@@ -16,7 +16,6 @@ import com.apress.prospring3.ch5.javaconfig.AppConfig;
 public class Jsr330Example {
 
 	public static void main(String[] args) {
-
 		
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:jsr330/jsr330.xml");
